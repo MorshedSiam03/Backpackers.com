@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { loginUser, googleLogin } = useContext(AuthContext);
+  const { loginUser, githubLogin, googleLogin } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [showPass, setShowPass] = useState(false);
   const location = useLocation();
@@ -34,6 +34,14 @@ const Login = () => {
   };
   const handleGoogleLogin = () => {
     googleLogin()
+    .then(result=>{
+      console.log(result.user);
+      navigate(location?.state ? location.state : "/");
+    })
+    .catch();
+  };
+  const handleGitHubLogin = () => {
+    githubLogin()
     .then(result=>{
       console.log(result.user);
       navigate(location?.state ? location.state : "/");
@@ -125,6 +133,7 @@ const Login = () => {
                 alt=""
               />
               <img
+              onClick={handleGitHubLogin}
                 className="w-12 ml-2 h-12"
                 src="https://cdn.icon-icons.com/icons2/2428/PNG/512/github_black_logo_icon_147128.png"
                 alt=""

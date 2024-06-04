@@ -1,9 +1,11 @@
-import {  useState } from "react";
+import {  useContext, useState } from "react";
 import {  useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateProfile = () => {
+    const { user } = useContext(AuthContext);
     const [errorPassMessage, setErrorPassMessage] = useState();
     const [errorMessage, setErrorMessage] = useState();
     const navigate = useNavigate();
@@ -74,7 +76,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter you name"
+                  placeholder={user.displayName}
                   name="name"
                   className="input input-bordered"
                   required
@@ -86,7 +88,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter you photo URL"
+                  placeholder={user.photoURL}
                   name="photoURL"
                   className="input input-bordered"
                   required
@@ -98,7 +100,7 @@ const UpdateProfile = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={user.email}
                   name="email"
                   className="input input-bordered"
                   required

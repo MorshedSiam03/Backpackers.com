@@ -1,8 +1,8 @@
-## Project Overview: Travel Booking Application
-# Introduction
+# Project Overview: Travel Booking Application
+## Introduction
 My Travel Booking Application is a comprehensive platform designed to cater to the diverse needs of travelers. It offers an intuitive and seamless user experience for booking hotels, resorts, and car rentals. The application is built using modern web technologies, ensuring a responsive and interactive interface that enhances user engagement.
 
-# Key Features
+## Key Features
 * Dynamic Banner: The homepage features a dynamic banner showcasing beautiful travel destinations, created using Swiper for smooth transitions and an appealing visual presentation.
 
 * Trending Destinations: A dedicated section highlighting the most popular travel destinations. Each image, on hover, displays additional information with a transparent overlay, created using Tailwind CSS for a modern look.
@@ -17,7 +17,7 @@ My Travel Booking Application is a comprehensive platform designed to cater to t
 
 * Responsive Design: The entire application is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
 
-# Technologies Used
+## Technologies Used
 * React: For building a dynamic and responsive user interface.
 * React Router: For managing navigation and routing within the application.
 * Tailwind CSS: For styling, providing a modern and responsive design framework.
@@ -25,7 +25,7 @@ My Travel Booking Application is a comprehensive platform designed to cater to t
 * Toast Notifications: For providing user feedback on actions like adding to the wishlist or booking a hotel.
 * Custom Utilities: Functions for managing saved hotels and wishlists, ensuring a personalized user experience.
 
-# Future Enhancements
+## Future Enhancements
 Enhanced User Profiles: Allow users to manage their profiles, view booking history, and update preferences.
 Advanced Search Filters: Implement more advanced filtering options for hotels and resorts based on user preferences.
 Payment Integration: Integrate secure payment gateways to facilitate online bookings directly through the platform.
